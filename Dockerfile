@@ -22,4 +22,4 @@ COPY --from=builder /usr/local/lib/python3.7/ /usr/local/lib/python3.7/
 COPY . .
 
 EXPOSE 8080
-ENTRYPOINT [ "python", "server.py" ]
+#ENTRYPOINT [ "python", "server.py" ]
