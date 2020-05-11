@@ -13,7 +13,7 @@ RUN apt-get -qq update \
     && apt-get install -y --no-install-recommends \
         wget
 
-WORKDIR /backend1/backend1
+#WORKDIR /backend1/backend1
 
 # Grab packages from builder
 COPY --from=builder /usr/local/lib/python3.7/ /usr/local/lib/python3.7/
@@ -22,6 +22,6 @@ COPY --from=builder /usr/local/lib/python3.7/ /usr/local/lib/python3.7/
 COPY . .
 
 EXPOSE 8080
-CMD [ "/bin/bash", "-c", "pwd; cd /backend1/backend1; python server.py " ]
+CMD [ "/bin/bash", "-c", "pwd; cd /backend1/backend1; ls -latr; python server.py " ]
 #CMD [ "/bin/bash", "-c", "sleep 9000" ]
 #ENTRYPOINT [ "python", "server.py" ]
