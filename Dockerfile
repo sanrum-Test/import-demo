@@ -22,5 +22,6 @@ COPY --from=builder /usr/local/lib/python3.7/ /usr/local/lib/python3.7/
 COPY . .
 
 EXPOSE 8080
-#CMD [ "/bin/bash", "-c", "sleep 9000" ]
-ENTRYPOINT [ "python", "/backend1/backend1/server.py" ]
+CMD [ "/bin/bash", "-c", "pwd" ]
+CMD [ "/bin/bash", "-c", "sleep 9000" ]
+ENTRYPOINT [ "python", "server.py" ]
