@@ -13,7 +13,7 @@ class S(BaseHTTPRequestHandler):
     def do_GET(self):
         logging.info("GET request,\nPath: %s\nHeaders:\n%s\n", str(self.path), str(self.headers))
         self._set_response()
-        self.wfile.write(json.dumps({'name': 'backend1','version': '1'}).encode(encoding='utf_8'))
+        self.wfile.write(json.dumps({'name': 'backend1','version': '2'}).encode(encoding='utf_8'))
 
 def run(server_class=HTTPServer, handler_class=S, port=8080):
     logging.basicConfig(level=logging.INFO)
